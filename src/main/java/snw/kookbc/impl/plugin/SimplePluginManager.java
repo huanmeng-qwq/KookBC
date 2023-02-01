@@ -30,6 +30,7 @@ import snw.kookbc.util.Util;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URLClassLoader;
+import java.security.SecureClassLoader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
@@ -79,7 +80,7 @@ public class SimplePluginManager implements PluginManager {
         // ((URLClassLoader) plugin.getClass().getClassLoader()).close();
         Plugin plugin;
         try {
-            URLClassLoader classLoader = Util.isStartByLaunch() ? LaunchMain.classLoader : (URLClassLoader) getClass().getClassLoader();
+            SecureClassLoader classLoader = Util.isStartByLaunch() ? LaunchMain.classLoader : (SecureClassLoader) getClass().getClassLoader();
             plugin = new SimplePluginClassLoader(client, file, classLoader).loadPlugin(file);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
