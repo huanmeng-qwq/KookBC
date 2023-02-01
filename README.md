@@ -73,7 +73,7 @@ java -jar kookbc-<version>.jar --help
 
 网络通信库: OkHttp 3
 
-Webhook HTTP 服务器库: Javalin 4
+Webhook HTTP 服务器库: [JLHTTP](http://www.freeutils.net/source/jlhttp/)
 
 JSON 处理库: Google GSON
 
@@ -81,6 +81,15 @@ JSON 处理库: Google GSON
 
 日志库: Apache Log4j2
 
+此程序提供了对 [SpongePowered Mixin](https://github.com/SpongePowered/Mixin)([FabricMC Mixin](https://github.com/FabricMC/Mixin)) 的支持。
+
 ## 版权
 
+Copyright (C) 2022 - 2023 KookBC contributors
+
 此程序使用 AGPLv3 作为许可证。
+
+对于仅将此程序作为依赖项的，可以适用 LGPLv3 许可证的条款，
+详见本仓库 COPYING.LESSER 文件。
+
+在编写 Mixin 支持 的实现代码时引用了部分来自 Mixin 项目的源代码，以及 [LegacyLauncher](https://github.com/Mojang/LegacyLauncher) 项目的源代码，在此一并表示感谢。
